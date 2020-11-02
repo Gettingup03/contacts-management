@@ -64,7 +64,10 @@ public class Contact implements Serializable {
             if(this.companies == null){
                 this.companies = new ArrayList<>();
             }
-            this.companies.add(company);
+            boolean alreadyPresent = this.companies.stream().anyMatch(c -> c.getId().equals(company.getId()));
+            if(!alreadyPresent){
+                this.companies.add(company);
+            }
         }
     }
 

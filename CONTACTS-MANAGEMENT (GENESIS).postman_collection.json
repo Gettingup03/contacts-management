@@ -29,12 +29,12 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/companies/1",
+					"name": "http://localhost:8080/api/companies/2",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/companies/1",
+							"raw": "http://localhost:8080/api/companies/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"path": [
 								"api",
 								"companies",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -56,7 +56,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n            \"name\": \"Soft-AC  Consulting\",\n            \"tva\" : \"BE0955789521\",\n            \"headOffice\": {\n                \"streetName\": \"Chemin de la Procession\",\n                \"number\": \"145\",\n                \"municipality\": \"Jempappes\",\n                \"postalCode\": \"7012\"\n            }\n}",
+							"raw": "{\n            \"name\": \"Soft-AC Consulting 2\",\n            \"tva\" : \"BE0955789521\",\n            \"headOffice\": {\n                \"streetName\": \"Chemin de la Procession\",\n                \"number\": \"145\",\n                \"municipality\": \"Jempappes\",\n                \"postalCode\": \"7012\"\n            }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -109,7 +109,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/companies/1/address",
+					"name": "http://localhost:8080/api/companies/2/addresses",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -123,7 +123,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/companies/2/address",
+							"raw": "http://localhost:8080/api/companies/2/addresses",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -133,7 +133,7 @@
 								"api",
 								"companies",
 								"2",
-								"address"
+								"addresses"
 							]
 						}
 					},
@@ -217,7 +217,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\t\"firstName\" : \"Anthony\",\n        \"lastName\" : \"Cloquette\",\n        \"address\" : {\n            \"streetName\" : \"Parc de la Sablonnière\",\n            \"number\" : \"10\",\n            \"box\" : \"42\",\n            \"municipality\" : \"Mons\",\n            \"postalCode\" : \"7000\"\n        },\n        \"type\" : \"EMPLOYEE\"\n}"
+							"raw": "{\n\t\t\"firstName\" : \"Shona\",\n        \"lastName\" : \"Cloquette\",\n        \"address\" : {\n            \"streetName\" : \"Rue Lloyd George\",\n            \"number\" : \"51\",\n            \"municipality\" : \"Jemappes\",\n            \"postalCode\" : \"7012\"\n        },\n        \"type\" : \"FREELANCE\",\n        \"tva\" : {\n            \"tva\" : \"BE0755432000\"\n        }\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/api/contacts",
@@ -296,6 +296,29 @@
 								"api",
 								"contacts",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/contacts/1/company/2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/contacts/1/company/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contacts",
+								"1",
+								"company",
+								"2"
 							]
 						}
 					},
