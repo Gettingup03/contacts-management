@@ -1,0 +1,31 @@
+info:
+  app:
+    name: "Contacts Management"
+    description: "Contacts Management API for Genesis Consult"
+    version: '@project.version@'
+management:
+  health:
+    defaults:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: genesis
+    password: consult
+  h2:
+    console:
+      enabled: true
+  logging:
+    level: info
+  profiles:
+    active: local
